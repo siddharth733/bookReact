@@ -35,7 +35,7 @@ function ViewSaleWork() {
     }
   return (
     <div>
-    <div className='container mt-5 p-5'>
+    <div className='categoryContainereds pd-4'>
     <div className='card'>
         <div className='card-header'>
             <h3 className='viewAddHead'>Authors Work List</h3>

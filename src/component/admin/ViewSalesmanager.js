@@ -51,7 +51,7 @@ function ViewSalesmanager() {
         });
     }
   return (
-    <div className='container mt-5 p-5'>
+    <div className='categoryContainereds pd-4'>
         <div className='card'>
             <div className='card-header'>
                 <h3 className='viewAddHead'>Category List <Link className='viewAdd' to='/admin/add-salemanager'>Add Salemanager</Link></h3>

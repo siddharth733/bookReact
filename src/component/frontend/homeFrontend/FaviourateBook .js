@@ -38,13 +38,13 @@ function FaviourateBook () {
             }
         }
         return(
-            <div className='col-md-3' key={item.id}>
-                        <div className='shadow CardBG text-center h-100 border'>
-                            <img src={item.image} className='w-100 h-50' alt={item.name}/>
-                            <div className='mt-4'>
+            <div className='col-md-4 my-3' key={item.id}>
+                        <div className='shadow CardBG m-2 text-center h-100 border'>
+                            <img src={item.image} className='mt-3' height={200} width={150}  alt={item.name}/>
+                            <div className='p-4'>
                                 <h4 className='textStyle'>{item.name}</h4>
                                 <button className='btn text-black fw-bold btn-outline-success m-2 px-4 textStyle' onClick={handleCheack}>Read</button>
-                                <Link className='btn text-black fw-bold btn-outline-primary m-2 px-4 textStyle' to={`../category/${item.category.slug}/${item.slug}`}>Detail</Link> 
+                                <Link className='btn text-black fw-bold btn-outline-primary m-2 px-4 textStyle' to={`./${item.slug}`}>Detail</Link>
                             </div>
                         </div>
                   </div>
@@ -55,7 +55,7 @@ function FaviourateBook () {
     <Navbar/>
     <div className='bodyContainer'>
     <img className='Loginimg' src={process.env.PUBLIC_URL + '/loginBge.jpg'} width="100%" alt='bro' />
-    <div className='categoryContainer mt-5'>
+    <div className='categoryContainered mt-5'>
         <div className='py-3'>
             <div className='container'>
                 <div className='row'>
