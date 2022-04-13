@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Books;
+use App\Models\Personal;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -48,7 +49,8 @@ class BookController extends Controller
     }
 
     public function view(){
-        $booksData = Books::all();
+        $user_id = Personal::value('tokenable_id');
+        $booksData = Books::where('author_id',$user_id)->get();
         return response()->json([
             'status' => 200,
             'booksData' => $booksData,

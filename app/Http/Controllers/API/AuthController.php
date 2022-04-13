@@ -295,8 +295,8 @@ class AuthController extends Controller
         ]);
     }
     public function allwork(){
-        $category = User::where('role_as',3)->pluck('id');
-        $books = Books::where('author_id',$category)->get();
+        $category = User::where('role_as','3')->pluck('id') ;
+        $books = Books::whereIn('author_id',$category)->get();
         return response()->json([
             'status' => 200,
             'booksData' => $books,
