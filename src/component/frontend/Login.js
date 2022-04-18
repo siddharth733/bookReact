@@ -62,8 +62,9 @@ const Login = () => {
   }
 
   return (
+    <>
+    <Navbar/>
     <div className='bodyContainer'>
-      <Navbar/>
       <img className='Loginimg' src={process.env.PUBLIC_URL+'/loginBge.jpg'} width ="100%" alt='bro' />
       <div className='loginContainer'>
           <div className='row loginRaw justify-content-center h-100'>
@@ -89,6 +90,7 @@ const Login = () => {
           </div>
       </div>
     </div>
+    </>
   )
 }
 

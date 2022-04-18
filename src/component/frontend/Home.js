@@ -8,13 +8,15 @@ import { faHome, faPersonWalkingDashedLineArrowRight, faWheelchairMove } from '@
 
 const Home = () => {
   return (
-    <div className='bodyContainer'>
-    <Navbar/>
-    <img className='Loginimg' src={process.env.PUBLIC_URL+'/loginBge.jpg'} width ="100%" height="100%" alt='bro' />
-    <div className='loginContainer'>
-        <h1 className='textStyle titleErrorss text-center fw-bold'>Welecome User <FontAwesomeIcon className='fa fa-1x' icon={faHome}/></h1>
-    </div>
-    </div>
+   <>
+   <Navbar/>
+   <div className='bodyContainer'>
+   <img className='Loginimg' src={process.env.PUBLIC_URL+'/loginBge.jpg'} width ="100%" alt='bro' />
+   <div className='loginContainer'>
+       <h1 className='textStyle titleErrorss text-center fw-bold'>Welecome User <FontAwesomeIcon className='fa fa-1x' icon={faHome}/></h1>
+   </div>
+   </div>
+   </>
   )
 }
 

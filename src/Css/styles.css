@@ -33,7 +33,7 @@ body{
   overflow: hidden;
   border-right: 2px solid hsl(0, 0%, 80%);
   white-space: nowrap;
-  animation: typewriters 2s steps(41) 2s 2 normal both,
+  animation: typewriters 2s steps(50) 2s 2 normal both,
   blinkTextCursor 500ms infinite;
 }
 
@@ -42,14 +42,15 @@ body{
   color: hsl(244, 57%, 10%);
   font-weight: bold;
   margin-left: 28%;
-  font-size: 75px;
+  font-size: 4vw;
   font-family: Georgia, 'Times New Roman', Times, serif ;
   letter-spacing: 4px;
   margin-top: 2%;
+  text-align: center;
   overflow: hidden;
   border-right: 2px solid hsl(0, 0%, 80%);
   white-space: nowrap;
-  animation: typewriterss 2s steps(50) 2s 2 normal both,
+  animation: typewriterss 2s steps(40) 2s 2 normal both,
   blinkTextCursor 500ms infinite;
 }
 
@@ -79,7 +80,7 @@ body{
   }
 
   to {
-    width: 820px;
+    width: 51%;
   }
 }
 
@@ -190,8 +191,13 @@ body{
 .Loginimg{
   opacity: 0.5;
   background-repeat: no-repeat;
+  height: 100vh;
 }
-
+.Loginimge{
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  width: 100vw;
+}
 .loginBtn{
   background-color: rgb(39, 5, 47);
   color: wheat;
@@ -285,8 +291,20 @@ body{
   left: 50%;
 }
 
-.categoryContainers{
+.categoryContainerss{
   position: absolute;
+  transform: translate(-50%, -50%); 
+  top: 30%;
+  overflow: hidden;
+  font-size: 4vh;
+  font-family: cursive;
+  color: rgb(2, 1, 17);
+  left: 50%;
+  margin-top: 11vw;
+}
+
+.categoryContainers{
+  position: absolute; 
   transform: translate(-50%, -50%); 
   top: 50%;
   overflow: hidden;
@@ -298,6 +316,11 @@ body{
 }
 
 .textStyle{
+  font-family: cursive;
+}
+
+.textStyles{
+  font-size: 3vh;
   font-family: cursive;
 }
 

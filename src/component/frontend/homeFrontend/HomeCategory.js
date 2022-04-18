@@ -33,8 +33,8 @@ function HomeCategory() {
         <Navbar/>
         <div className='bodyContainer'>   
             <img className='Loginimg' src={process.env.PUBLIC_URL + '/loginBge.jpg'} width="100%" alt='bro' />
-            <div className='categoryContainer'>
-                <div className='container text-center mb-5'>
+            <div className='categoryContainer text-center mt-5'>
+                <div className='container my-3'>
                     <h3 className='textStyle display-3 fw-bold'>Books Category <FontAwesomeIcon className='fa fa-1x' icon={faBookBookmark}/></h3>
                 </div>
                 <div className='container bg-transparent'>

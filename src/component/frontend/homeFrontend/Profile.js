@@ -15,25 +15,27 @@ function Profile() {
     var profile_data = '';
     profile_data = users.map((item) => {
         return(
-            <div className='row loginRaw justify-content-center h-100' key={item.id}>
-            <img src={process.env.PUBLIC_URL + 'loginBge.jpg'} className='mt-5 mb-2 w-75 rounded-circle Loginimg' />
-            <div className='text-center mt-5 pt-5 categoryContainer'>
-            <label className='fw-bold'>Name</label>
-            <h3 className='mb-3 textStyle'>{item.name}</h3>
-            <label className='fw-bold'>Email</label>
-            <h3 className='mb-3 textStyle'>{item.email}</h3>
+            <div className='row loginRaw justify-content-center h-75 w-100' key={item.id}>
+            <img src={process.env.PUBLIC_URL + 'loginBge.jpg'} className='rounded-circle Loginimge' />
+            <div className='text-center categoryContainerss'>
+                <label className='fw-bold'>Name</label>
+                <h3 className='textStyles'>{item.name}</h3>
+                <label className='fw-bold'>Email</label>
+                <h3 className='textStyles'>{item.email}</h3>
             </div>
         </div>
         )
     });
   return (
+    <>
+    <Navbar />
     <div className='bodyContainer'>
-            <Navbar />
             <img className='Loginimg' src={process.env.PUBLIC_URL + '/loginBge.jpg'} width="100%" alt='bro' />
-            <div className='categoryContainers'>
+            <div className='categoryContainers w-100'>
                 {profile_data}
             </div>
         </div>
+    </>
   )
 }
 
