@@ -49,7 +49,7 @@ class BookController extends Controller
     }
 
     public function view(){
-        $user_id = Personal::value('tokenable_id');
+        $user_id = request()->cookie('useId');
         $booksData = Books::where('author_id',$user_id)->get();
         return response()->json([
             'status' => 200,

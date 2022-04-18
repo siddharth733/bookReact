@@ -36,8 +36,8 @@ class FaviourateController extends Controller
         }
     }
     public function view(){
-        $user_id = Personal::value('tokenable_id');
-            $faviourate = Faviourate::where('user_id',$user_id)->pluck('books_id');
+        $userId = request()->cookie('useId');
+            $faviourate = Faviourate::where('user_id',$userId)->pluck('books_id');
             $booksData = Books::whereIn('id',$faviourate)->get();
                 return response()->json([
                     'status' => 200,
@@ -46,7 +46,7 @@ class FaviourateController extends Controller
     }
     public function cheack($book){
         $bookData = Books::Where('slug', $book)->value('id');
-        $user_id = Personal::value('tokenable_id');
+        $user_id = request()->cookie('useId');
         $favBook = Faviourate::where('books_id',$bookData)->where('user_id',$user_id)->value('id');
         if($favBook){
             return response()->json([

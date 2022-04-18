@@ -7,6 +7,7 @@ use App\Models\Books;
 use App\Models\Personal;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -73,6 +74,8 @@ class AuthController extends Controller
                     $role = 'user';
                     $token = $user->createToken($user->email.'_Token',[''])->plainTextToken;
                 }
+            $userId = $user->id;
+            Cookie::queue('useId',$userId, 60);
             return response()->json([
                 'status'=>200,
                 'username'=>$user->name,
@@ -88,6 +91,7 @@ class AuthController extends Controller
 
     public function logout(){
         auth()->user()->tokens()->delete();
+        Cookie::queue(Cookie::forget('useId'));
         return response()->json([
             'status'=>200,
             'message'=>"Logout Successfully...",
@@ -189,7 +193,7 @@ class AuthController extends Controller
     }
 
     public function addauthor(Request $request){
-        $user_id = Personal::value('tokenable_id');
+        $user_id = request()->cookie('useId');
         $validator = Validator::make($request->all() ,[
             'name'=>'required|max:191|unique:users,name'  ,
             'email'=>'required|email|max:191|unique:users,email',
@@ -215,7 +219,7 @@ class AuthController extends Controller
     }
 
     public function viewauthor(){
-        $user_id = Personal::value('tokenable_id');
+        $user_id = request()->cookie('useId');
         $category = User::where('role_as',3)->where('meta_id',$user_id)->get();
         return response()->json([
             'status' => 200,
@@ -286,7 +290,7 @@ class AuthController extends Controller
         }
     }
     public function viewauthorwork(){
-        $user_id = Personal::value('tokenable_id');
+        $user_id = request()->cookie('useId');
         $category = User::where('role_as',3)->where('meta_id',$user_id)->value('id');
         $books = Books::where('author_id',$category)->get();
         return response()->json([
@@ -303,7 +307,7 @@ class AuthController extends Controller
         ]);
     }
     public function profile(){
-        $user_id = Personal::value('tokenable_id');
+        $user_id = request()->cookie('useId');
         $user = User::where('id',$user_id)->get();
         return response()->json([
             'status' => 200,
