@@ -37,6 +37,14 @@ function FaviourateBook () {
                   swal('Warning','Pleas Login First','warning');
             }
         }
+        const handleDetail = (e) => {
+            e.preventDefault();
+            if(localStorage.getItem('auth_token')){
+                navigate(`../category/${item.category.slug}/${item.slug}`)
+            }else{
+                  swal('Warning','Pleas Login First','warning');
+            }
+        }
         return(
             <div className='col-md-4 my-3' key={item.id}>
                         <div className='shadow CardBG m-2 text-center h-100 border'>
@@ -44,7 +52,7 @@ function FaviourateBook () {
                             <div className='p-4'>
                                 <h4 className='textStyle'>{item.name}</h4>
                                 <button className='btn text-black fw-bold btn-outline-success m-2 px-4 textStyle' onClick={handleCheack}>Read</button>
-                                <Link className='btn text-black fw-bold btn-outline-primary m-2 px-4 textStyle' to={`./${item.slug}`}>Detail</Link>
+                                <button className='btn text-black fw-bold btn-outline-primary m-2 px-4 textStyle' onClick={handleDetail}>Detail</button>
                             </div>
                         </div>
                   </div>
