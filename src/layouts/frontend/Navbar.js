@@ -3,6 +3,7 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import swal from 'sweetalert';
 
+
 const Navbar = () => {
 
     const navigate = useNavigate();
@@ -80,13 +81,14 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="navbar navbarFirst navbar-expand-lg navbar-light shadow sticky-top">
+
+            <nav className="navbar navbarFirst navbar-expand-lg navbar-light shadow ">
                 <div className="container ">
                     <Link className="NavHead" to="#">Book Store</Link>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="/navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li className="nav-item">
                                 <Link className="NavTitle active" aria-current="page" to="/">Home</Link>

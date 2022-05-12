@@ -53,6 +53,7 @@ function ViewBooks() {
           });
     return (
         <>
+        <div>
         <Navbar/>
         <div className='bodyContainer'>
         <img className='Loginimg' src={process.env.PUBLIC_URL + '/loginBge.jpg'} width="100%" alt='bro' />
@@ -64,6 +65,7 @@ function ViewBooks() {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
         </div>
         </>

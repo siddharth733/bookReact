@@ -30,7 +30,9 @@ function HomeCategory() {
         });
     return (
         <>
+        <div>
         <Navbar/>
+        </div>
         <div className='bodyContainer'>   
             <img className='Loginimg' src={process.env.PUBLIC_URL + '/loginBge.jpg'} width="100%" alt='bro' />
             <div className='categoryContainer text-center mt-5'>
