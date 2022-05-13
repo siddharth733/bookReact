@@ -7,7 +7,7 @@ const PageNotFound = () => {
         position:'absolute',
         width:'100%',
         height:'100%',
-        paddingTop:'20%',
+        paddingTop:'40vh',
         backgroundColor:'red',
      }
      const textStyle ={

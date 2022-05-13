@@ -25,8 +25,8 @@ body{
   position: relative;
   color: hsl(0, 89%, 4%);
   font-weight: bold;
-  margin-left: 32%;
-  font-size: 45px;
+  margin-left: 10%;
+  font-size: 4vw;
   font-family: Georgia, 'Times New Roman', Times, serif ;
   letter-spacing: 8px;
   margin-top: 2%;
@@ -70,7 +70,7 @@ body{
   }
 
   to {
-    width: 620px;
+    width: 85vw;
   }
 }
 
@@ -293,22 +293,21 @@ body{
 
 .categoryContainerss{
   position: absolute;
-  transform: translate(-50%, -50%); 
-  top: 30%;
+  transform: translate(-62%, -50%); 
+  top: 18%;
   overflow: hidden;
-  font-size: 4vh;
+  font-size: 4vw;
   font-family: cursive;
   color: rgb(2, 1, 17);
-  left: 50%;
+  left: 48%;
   margin-top: 11vw;
 }
 
 .categoryContainers{
   position: absolute; 
-  transform: translate(-50%, -50%); 
-  top: 50%;
+  transform: translate(15vw, -148vh);
+  margin-top: 50vh;
   overflow: hidden;
-  left: 50%;
 }
 
 .categoryBg{
@@ -320,7 +319,7 @@ body{
 }
 
 .textStyles{
-  font-size: 3vh;
+  font-size: 3vw;
   font-family: cursive;
 }
 

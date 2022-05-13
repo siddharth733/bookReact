@@ -15,7 +15,7 @@ function Profile() {
     var profile_data = '';
     profile_data = users.map((item) => {
         return(
-            <div className='row loginRaw justify-content-center h-75 w-100' key={item.id}>
+            <div className='row loginRaw justify-content-center w-75' key={item.id}>
             <img src={process.env.PUBLIC_URL + 'loginBge.jpg'} className='rounded-circle Loginimge' />
             <div className='text-center categoryContainerss'>
                 <label className='fw-bold'>Name</label>
